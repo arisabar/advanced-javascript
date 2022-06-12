@@ -8,7 +8,7 @@
 // console.log(`${alert("Halo")}`);
 
 const x = 10;
-console.log(`${x % 2 == 0 ? "genap" : "ganjil"}`);
+// console.log(`${x % 2 == 0 ? "genap" : "ganjil"}`);
 
 //* ======= HTML Fragments =============
 
@@ -23,8 +23,8 @@ const el = `<div class="mhs">
 <span class="jobs">${mhs.pekerjaan}</span>
 </div>`;
 
-console.log(el);
-document.write(el);
+// console.log(el);
+// document.write(el);
 // document.body.innerHTML = el;
 
 //* ======= Exercise ===========
@@ -117,3 +117,31 @@ const tampilSabar = `<div class="sabar">
 let child3 = document.createElement("div");
 child3.innerHTML = tampilSabar;
 templateliteral.appendChild(child3);
+
+//* ====== tagged template
+
+const a = "sabar subakti",
+  b = "web developer";
+
+function coba(string, ...value) {
+  //   let result = "";
+  //   string.forEach((str, i) => {
+  //     result += `${str}${value[i] || ""}`;
+  //   });
+  //   return result;
+
+  return string.reduce(
+    (result, str, i) =>
+      `${result}${str}<span class="hl">${value[i] || ""}</span>`,
+    ""
+  );
+}
+const str = coba`Halo saya ${a}, saya seorang ${b} terima kasih`;
+document.write(str);
+
+//* implementasi lain untuk tagged template
+/*
+escaping html tags / sanitize
+translation & internationalization
+styled components
+*/
