@@ -1,103 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>advanced javascript</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+      }
 
-        .wrapper {
-            padding: 2rem;
-        }
+      .wrapper {
+        padding: 2rem;
+      }
 
-        li {
-            list-style-type: none;
-            margin-top: .5rem;
-        }
+      li {
+        list-style-type: none;
+        margin-top: 0.5rem;
+      }
 
-        h3 {
-            margin-top: 1rem;
-        }
+      h3 {
+        margin-top: 1rem;
+      }
 
-        .box {
-            width: 100px;
-            height: 100px;
-            border: 1px solid black;
-            margin: 50px auto;
-            transition: .3s width,
-                .3s height .3s,
-                .3s margin-top .3s,
-                1s background-color;
-        }
+      .judul {
+        text-align: center;
+        margin: 20px;
+        font-family: "Courier New", Courier, monospace;
+        cursor: pointer;
+      }
 
-        .size {
-            width: 150px;
-            height: 150px;
-            margin-top: 25px;
-        }
+      .judul span {
+        display: inline-block;
+        transition: 0.3s;
+      }
 
-        .caption {
-            background-color: black;
-            color: white;
-        }
+      .judul span:hover {
+        transform: scale(1.5) translateY(5px);
+      }
 
-        .templateLiteral {
-            margin: 1rem;
-        }
+      .box {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        margin: 50px auto;
+        transition: 0.3s width, 0.3s height 0.3s, 0.3s margin-top 0.3s,
+          1s background-color;
+      }
 
-        .hl {
-            background-color: salmon;
-            text-transform: uppercase;
-        }
+      .size {
+        width: 150px;
+        height: 150px;
+        margin-top: 25px;
+      }
+
+      .caption {
+        background-color: black;
+        color: white;
+      }
+
+      .templateLiteral {
+        margin: 1rem;
+      }
+
+      .hl {
+        background-color: salmon;
+        text-transform: uppercase;
+      }
+
+      .forof {
+        margin: 20px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <h1>Advanced Javascript</h1>
+  <body>
+    <h1 class="judul">Advanced Javascript</h1>
     <div class="box"></div>
     <div class="wrapper">
+      <h3>My Videos</h3>
+      <ul>
+        <li data-angka="15:27">Teknik Pomodoro</li>
+        <li data-angka="11:18">JAVASCRIPT LANJUTAN | Higher Order Functions</li>
+        <li data-angka="21:40">
+          JAVASCRIPT LANJUTAN | This pada Arrow Function
+        </li>
+        <li data-angka="19:38">Website Penipu</li>
+        <li data-angka="12:10">JAVASCRIPT LANJUTAN | Arrow Function</li>
+        <li data-angka="20:43">JAVASCRIPT LANJUTAN | Closure</li>
+        <li data-angka="14:30">#TANYAPADIKA EP005</li>
+        <li data-angka="26:38">JAVASCRIPT LANJUTAN | Execution Context</li>
+        <li data-angka="17:33">JAVASCRIPT LANJUTAN | Prototype</li>
+        <li data-angka="10:39">JAVASCRIPT LANJUTAN | Object.create()</li>
+        <li data-angka="17:31">JAVASCRIPT LANJUTAN | Object (Revisited)</li>
+        <li data-angka="14:25">5 Tips Bertanya Ketika Error</li>
+      </ul>
 
-        <h3>My Videos</h3>
-        <ul>
-            <li data-angka="15:27">Teknik Pomodoro</li>
-            <li data-angka="11:18">JAVASCRIPT LANJUTAN | Higher Order Functions</li>
-            <li data-angka="21:40">JAVASCRIPT LANJUTAN | This pada Arrow Function</li>
-            <li data-angka="19:38">Website Penipu</li>
-            <li data-angka="12:10">JAVASCRIPT LANJUTAN | Arrow Function</li>
-            <li data-angka="20:43">JAVASCRIPT LANJUTAN | Closure</li>
-            <li data-angka="14:30">#TANYAPADIKA EP005</li>
-            <li data-angka="26:38">JAVASCRIPT LANJUTAN | Execution Context</li>
-            <li data-angka="17:33">JAVASCRIPT LANJUTAN | Prototype</li>
-            <li data-angka="10:39">JAVASCRIPT LANJUTAN | Object.create()</li>
-            <li data-angka="17:31">JAVASCRIPT LANJUTAN | Object (Revisited)</li>
-            <li data-angka="14:25">5 Tips Bertanya Ketika Error</li>
-        </ul>
-
-        <h3>My Playlist</h3>
-        <ol>
-            <li>
-                <h4>Javascript Lanjutan</h4>
-                <p>Jumlah Video : <span class="jumlah-video"></span></p>
-                <p>Total Durasi : <span class="total-durasi"></span></p>
-            </li>
-        </ol>
+      <h3>My Playlist</h3>
+      <ol>
+        <li>
+          <h4>Javascript Lanjutan</h4>
+          <p>Jumlah Video : <span class="jumlah-video"></span></p>
+          <p>Total Durasi : <span class="total-durasi"></span></p>
+        </li>
+      </ol>
     </div>
-    <div class="templateLiteral">
-
-    </div>
+    <div class="templateLiteral"></div>
     <div class="forof">
-        <ul>
-            <li class="nama">Wayan</li>
-            <li class="nama">Ari</li>
-            <li class="nama">Sabar</li>
-            <li class="nama">Subakti</li>
-        </ul>
+      <ul>
+        <li class="nama">Wayan</li>
+        <li class="nama">Ari</li>
+        <li class="nama">Sabar</li>
+        <li class="nama">Subakti</li>
+      </ul>
     </div>
     <!-- <script src="./script.js"></script> -->
     <!-- <script src="./script2.js"></script> -->
@@ -106,8 +122,7 @@
     <!-- <script src="./higerOrderFn.js"></script> -->
     <!-- <script src="./templateLiteral.js"></script> -->
     <!-- <script src="./destructuring.js"></script> -->
-    <script src="./for-ofVSfor-in.js"></script>
-
-</body>
-
+    <!-- <script src="./for-ofVSfor-in.js"></script> -->
+    <script src="./spreadOperator.js"></script>
+  </body>
 </html>
